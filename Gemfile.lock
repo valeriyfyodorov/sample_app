@@ -35,8 +35,13 @@ GEM
       xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+<<<<<<< HEAD
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
+=======
+    childprocess (0.5.3)
+      ffi (~> 1.0, >= 1.0.11)
+>>>>>>> static-pages
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -50,7 +55,10 @@ GEM
     execjs (2.2.1)
     ffi (1.9.3)
     formatador (0.2.5)
+<<<<<<< HEAD
     growl (1.0.3)
+=======
+>>>>>>> static-pages
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -60,10 +68,13 @@ GEM
     guard-rspec (2.5.0)
       guard (>= 1.1)
       rspec (~> 2.11)
+<<<<<<< HEAD
     guard-spork (1.5.0)
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
+=======
+>>>>>>> static-pages
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.6.11)
@@ -152,10 +163,13 @@ GEM
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
     slop (3.6.0)
+<<<<<<< HEAD
     spork (1.0.0rc4)
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
+=======
+>>>>>>> static-pages
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -191,9 +205,13 @@ DEPENDENCIES
   capybara (= 2.1.0)
   childprocess (= 0.3.6)
   coffee-rails (= 4.0.1)
+<<<<<<< HEAD
   growl (= 1.0.3)
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
+=======
+  guard-rspec (= 2.5.0)
+>>>>>>> static-pages
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   pg (= 0.15.1)

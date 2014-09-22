@@ -1,6 +1,9 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
+<<<<<<< HEAD
 require 'active_support/inflector'
+=======
+>>>>>>> static-pages
 
 guard 'rspec', all_after_pass: false do
   watch(%r{^spec/.+_spec\.rb$})
@@ -24,6 +27,11 @@ guard 'rspec', all_after_pass: false do
     "spec/requests/authentication_pages_spec.rb"
   end
 
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> static-pages
   # Rails example
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
   watch(%r{^app/(.*)(\.erb|\.haml)$})                 { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
