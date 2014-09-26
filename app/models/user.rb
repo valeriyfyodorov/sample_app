@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
-	#uncomment one and comment the second to enable secure_passwords of 'bcrypt-ruby' gem
-	has_secure_password
-    #attr_accessor :password, :password_confirmation         
+	
+  #uncomment one and comment the second to enable secure_passwords of 'bcrypt-ruby' gem
+	has_secure_password #attr_accessor :password, :password_confirmation         
+  
+  has_many :microposts, dependent: :destroy
 
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
@@ -15,15 +17,20 @@ class User < ActiveRecord::Base
 
 
     def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-      sign_in user
-      redirect_to user
-    else
-      flash.now[:error] = 'Invalid email/password combination'
-      render 'new'
+      user = User.find_by(email: params[:session][:email].downcase)
+      if user && user.authenticate(params[:session][:password])
+        sign_in user
+        redirect_to user
+      else
+        flash.now[:error] = 'Invalid email/password combination'
+        render 'new'
+      end
     end
-  end
+
+    def feed
+      # This is preliminary. See "Following users" for the full implementation.
+      Micropost.where("user_id = ?", id)
+    end
 
     def User.new_remember_token
       SecureRandom.urlsafe_base64
